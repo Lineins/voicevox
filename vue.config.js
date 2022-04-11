@@ -28,8 +28,8 @@ module.exports = {
       builderOptions: {
         fileAssociations: [
           {
-            ext: "vvproj",
-            name: "VOICEVOX Project file",
+            ext: "ivproj",
+            name: "ITVOICE on VOICEVOX Project file",
             role: "Editor",
           },
         ],
@@ -42,9 +42,9 @@ module.exports = {
           },
         ],
         // electron-builder installer
-        productName: "VOICEVOX",
-        appId: "jp.hiroshiba.voicevox",
-        copyright: "Hiroshiba Kazuyuki",
+        productName: "ITVOICEonVOICEVOX",
+        appId: "itvoice.on.voicevox",
+        copyright: "ITahobi",
         afterAllArtifactBuild: path.resolve(
           __dirname,
           "build",

@@ -21,7 +21,7 @@
       {{
         (isEdited ? "*" : "") +
         (projectName !== undefined ? projectName + " - " : "") +
-        "VOICEVOX" +
+        "ITVOICE on VOICEVOX" +
         (currentVersion ? " - Ver. " + currentVersion : "")
       }}
     </div>
@@ -383,7 +383,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@use '@/styles/colors' as colors;
+@use "@/styles/colors" as colors;
 
 .active-menu {
   background-color: rgba(colors.$primary-rgb, 0.3) !important;
@@ -391,8 +391,8 @@ export default defineComponent({
 </style>
 
 <style scoped lang="scss">
-@use '@/styles/variables' as vars;
-@use '@/styles/colors' as colors;
+@use "@/styles/variables" as vars;
+@use "@/styles/colors" as colors;
 
 .q-bar {
   min-height: vars.$menubar-height;

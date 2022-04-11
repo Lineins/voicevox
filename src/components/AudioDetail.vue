@@ -5,8 +5,8 @@
         <div class="detail-selector">
           <q-tabs dense vertical class="text-display" v-model="selectedDetail">
             <q-tab name="accent" label="ｱｸｾﾝﾄ" />
-            <q-tab name="pitch" label="ｲﾝﾄﾈｰｼｮﾝ" />
-            <q-tab name="length" label="長さ" />
+            <q-tab name="pitch" label="ｲﾝﾄﾈｰｼｮﾝ" style="display: none" />
+            <q-tab name="length" label="長さ" style="display: none" />
           </q-tabs>
         </div>
         <div class="play-button-wrapper">
@@ -748,8 +748,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@use '@/styles/variables' as vars;
-@use '@/styles/colors' as colors;
+@use "@/styles/variables" as vars;
+@use "@/styles/colors" as colors;
 
 $pitch-label-height: 24px;
 

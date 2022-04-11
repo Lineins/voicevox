@@ -12,7 +12,7 @@ import { buildProjectFileName } from "./utility";
 import Ajv, { JTDDataType } from "ajv/dist/jtd";
 import { AccentPhrase } from "@/openapi";
 
-const DEFAULT_SAMPLING_RATE = 24000;
+const DEFAULT_SAMPLING_RATE = 44100;
 
 export const projectStoreState: ProjectStoreState = {
   savedLastCommandUnixMillisec: null,
@@ -94,7 +94,7 @@ export const projectStore: VoiceVoxStoreOptions<
           filePath = ret[0];
         }
 
-        const projectFileErrorMsg = `VOICEVOX Project file "${filePath}" is a invalid file.`;
+        const projectFileErrorMsg = `ITVOICE on VOICEVOX Project file "${filePath}" is a invalid file.`;
 
         try {
           const buf = await window.electron.readFile({ filePath });
@@ -105,7 +105,7 @@ export const projectStore: VoiceVoxStoreOptions<
           if (!("appVersion" in obj && typeof obj.appVersion === "string")) {
             throw new Error(
               projectFileErrorMsg +
-                " The appVersion of the project file should be string"
+              "The appVersion of the project file should be string"
             );
           }
           const appVersionList = versionTextParse(obj.appVersion);
@@ -114,7 +114,7 @@ export const projectStore: VoiceVoxStoreOptions<
           if (appVersionList == null || nowAppVersionList == null) {
             throw new Error(
               projectFileErrorMsg +
-                ' An invalid appVersion format. The appVersion should be in the format "%d.%d.%d'
+              'An invalid appVersion format. The appVersion should be in the format "%d.%d.%d'
             );
           }
 
@@ -220,7 +220,7 @@ export const projectStore: VoiceVoxStoreOptions<
           if (!obj.audioKeys.every((audioKey) => audioKey in obj.audioItems)) {
             throw new Error(
               projectFileErrorMsg +
-                " Every audioKey in audioKeys should be a key of audioItems"
+              "Every audioKey in audioKeys should be a key of audioItems"
             );
           }
           if (
@@ -285,7 +285,7 @@ export const projectStore: VoiceVoxStoreOptions<
 
           if (!filePath) {
             // if new project: use generated name
-            defaultPath = buildProjectFileName(context.state, "vvproj");
+            defaultPath = buildProjectFileName(context.state, "ivproj");
           } else {
             // if saveAs for existing project: use current project path
             defaultPath = filePath;

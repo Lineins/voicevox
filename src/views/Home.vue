@@ -500,14 +500,14 @@ export default defineComponent({
         case ".txt":
           store.dispatch("COMMAND_IMPORT_FROM_FILE", { filePath: file.path });
           break;
-        case ".vvproj":
+        case ".ivproj":
           store.dispatch("LOAD_PROJECT_FILE", { filePath: file.path });
           break;
         default:
           store.dispatch("SHOW_WARNING_DIALOG", {
             title: "対応していないファイルです",
             message:
-              "テキストファイル (.txt) とVOICEVOXプロジェクトファイル (.vvproj) に対応しています。",
+              "テキストファイル (.txt) とITVOICE on VOICEVOXプロジェクトファイル (.ivproj) に対応しています。",
           });
       }
     };
@@ -552,8 +552,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@use '@/styles/variables' as vars;
-@use '@/styles/colors' as colors;
+@use "@/styles/variables" as vars;
+@use "@/styles/colors" as colors;
 
 .q-header {
   height: vars.$header-height;

@@ -125,14 +125,14 @@ export default defineComponent({
         name: "アップデート情報",
         component: UpdateInfo,
       },
-      {
-        name: "よくあるご質問",
-        component: QAndA,
-      },
-      {
-        name: "お問い合わせ",
-        component: ContactInfo,
-      },
+      // {
+      //   name: "よくあるご質問",
+      //   component: QAndA,
+      // },
+      // {
+      //   name: "お問い合わせ",
+      //   component: ContactInfo,
+      // },
     ];
 
     const selectedPage = ref(pagedata[0].name);
@@ -147,7 +147,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@use '@/styles/colors' as colors;
+@use "@/styles/colors" as colors;
 
 .help-dialog .q-layout-container :deep(.absolute-full) {
   right: 0 !important;
