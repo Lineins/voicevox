@@ -21,7 +21,7 @@
       {{
         (isEdited ? "*" : "") +
         (projectName !== undefined ? projectName + " - " : "") +
-        "Holo-VOICEVOX" +
+        "AIRushia on VOICEVOX" +
         (currentVersion ? " - Ver. " + currentVersion + " - " : "") +
         (useGpu ? "GPU" : "CPU")
       }}
