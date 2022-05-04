@@ -609,14 +609,14 @@ export default defineComponent({
         case ".txt":
           store.dispatch("COMMAND_IMPORT_FROM_FILE", { filePath: file.path });
           break;
-        case ".vvproj":
+        case ".holovvproj":
           store.dispatch("LOAD_PROJECT_FILE", { filePath: file.path });
           break;
         default:
           store.dispatch("SHOW_WARNING_DIALOG", {
             title: "対応していないファイルです",
             message:
-              "テキストファイル (.txt) とVOICEVOXプロジェクトファイル (.vvproj) に対応しています。",
+              "テキストファイル (.txt) とHoloVOICEVOXプロジェクトファイル (.vvproj) に対応しています。",
           });
       }
     };
